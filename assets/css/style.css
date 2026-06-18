@@ -214,11 +214,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 footer {
     background-color: var(--darkGrey);
+    padding-bottom: 1vh;
+}
+
+.footerH3 {
+    margin-top: 1vh;
 }
 
 footer section {
     display: flex;
-    /* justify-content: space-around; */
 }
 
 .footerInfo {
@@ -228,6 +232,7 @@ footer section {
 footer div p {
     color: var(--blue);
     margin: 1vh 0 0 0;
+    line-height: 2vh;
 }
 
 footer div h3 {
@@ -250,8 +255,12 @@ footer div h3 {
     margin: 0 0 0 3vw;
 }
 
+
+
+/*  */
 /*  */
 /* Media */
+/*  */
 /*  */
 
 /* taplet */
@@ -333,6 +342,7 @@ footer div h3 {
 
     .footerInfo p {
         font-size: 2.5vw;
+        line-height: 5vh;
     }
 
     #footerH3 {
@@ -365,6 +375,7 @@ footer div h3 {
 
 
     /* navigation */
+
     .navigation {
         justify-content: start;
     }
@@ -372,6 +383,11 @@ footer div h3 {
     .navigation li a {
         font-size: 1.5vw;
     }
+
+    #cTegn {
+        font-size: 40px;
+    }
+
 
     /* Om os section */
 
@@ -402,8 +418,7 @@ footer div h3 {
     }
 
     .locationImg {
-        max-height: 60vh;
-        max-width: 42vw;
+        max-width: 630px;
 
     }
 
@@ -416,12 +431,11 @@ footer div h3 {
 
     .gridImg {
         /* gap: 2vw; */
-        width: 40vw;
-        height: 50vh;
+        width: 600px;
     }
 
     .bigImg {
-        height: 70vh;
+        height: 600px;
     }
 
     /* Footer */
@@ -436,7 +450,10 @@ footer div h3 {
 
     .footerInfo p {
         font-size: 2vw;
+        line-height: 7vh;
     }
+
+
 
 
 }
