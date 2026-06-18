@@ -4,4 +4,478 @@
 
 body {
     margin: 0;
+    background-color: var(--lightGrey);
+    border: solid black 1px;
+    margin: 2vw;
+} 
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Montserrat", sans-serif;
 }
+
+/*  */
+/* ROOT */
+/*  */
+
+:root {
+    /* overskrift */
+    --blue: #377FAC;
+    --yellow: #E7901E;
+    --red: #BC4428;
+
+    /* baggrundsfarver */
+    --darkGrey: #333333;
+    --lightGrey: #dddddd;
+
+    /* special farver */
+    --notSoLightGrey: #b6b6b6;
+
+    /* hover farver */
+    --darkerBlue: #32729b;
+    --darkerGrey: #212121;
+}
+
+
+/*  */
+/* Header */
+/*  */
+
+#blue {
+    color: var(--blue);
+}
+
+.blue {
+    color: var(--blue);
+    font-weight: 400;
+}
+
+
+
+/* overskrift */
+
+.heroSection p {
+    font-size: 8vw;
+    padding: 0 0 0 1.5vw;
+    margin: 0;
+    color: var(--blue);
+    font-weight: 400;
+}
+
+.heroSection h1 {
+    color: var(--blue);
+    font-size: 14vw;
+    margin: 0;
+    padding: 0 0 0 1.5vw;
+    font-weight: 700;
+}
+
+#cTegn {
+    color: var(--notSoLightGrey);
+    font-size: 6vw;
+}
+
+#heroSpan1 {
+    color: var(--yellow);
+}
+
+#heroSpan2 {
+    color: var(--red);
+}
+
+/* Navigation */
+
+.navigation li {
+    list-style: none;
+    color: white;
+    padding: .5vh;
+}
+
+.navigation {
+    text-decoration: none;
+    background-color: var(--darkGrey);
+    padding: 1vw;
+}
+
+.navigation li:hover {
+    background-color: var(--darkerGrey);
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+/*  */
+/* Main */
+/*  */
+
+/* Om Os */
+
+.omOsSect p {
+    padding: 0 0 0 1.5vw;
+}
+
+.omOsSect h1, h3 {
+    margin: 0;
+    padding: 0 0 0 1.5vw;
+    color: var(--blue);
+}
+/* hero video */
+
+#heroVid {
+    width: 100%;
+    padding: 1.5vw;
+}
+
+/* Locations */
+
+.card {
+    margin-top: 5vh;
+}
+
+.card p {
+    font-weight: 400;
+}
+
+.locations {
+    padding: 0 3vw 0 3vw;
+}
+
+.locationImg {
+    width: 100%;
+}
+
+.locations h1, div h2 {
+    color: var(--blue);
+    margin: 0 0 0 0;
+}
+
+.locations div p {
+    margin: 0;
+
+}
+
+/*  */
+/* Image galleri og img switcher halløj */
+/*  */
+
+.imgGalleri h1 {
+    padding: 0 0 0 3vw;
+    margin: 4vh 0 1vh 0;
+    color: var(--blue);
+}
+
+/* Når den bliver desktop eller taplet og de skal ved siden af hinanden, brug columns samt rows */
+.gridSect {
+    display: grid;
+    /* grid-template-columns: 150px 150px; */
+    grid-template-rows: 350px 350px;
+    gap: 2vw;
+    justify-content: center;
+}
+
+/* GRID */
+.gridImg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2vw;
+    width: 350px;
+    height: 350px;
+}
+
+/* Styling af 2x2 grid */
+.gridImg .tile {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+/* det store billede */
+.bigImg {
+    width: auto;
+    height: 350px;
+    overflow: hidden;
+}
+
+.bigImg .bigTile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/*  */
+/* Footer */
+/*  */
+
+footer {
+    background-color: var(--darkGrey);
+}
+
+footer section {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.footerInfo {
+    margin: 0 0 0 5vw;
+}
+
+footer div p {
+    color: var(--blue);
+    margin: 1vh 0 0 0;
+}
+
+footer div h3 {
+    color: var(--blue);
+    margin: 1vh 0 0 0;
+    padding: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#map {
+    margin: 1vh 0 1vh 3vw;
+    width: 45vw;
+    height: 15vh;
+}
+
+#footerH3 {
+    margin: 0 0 0 3vw;
+}
+
+/*  */
+/* Media */
+/*  */
+
+/* taplet */
+@media (min-width: 900px) {
+
+    /* Navigation & header */
+
+    .heroSection h1 {
+        font-size: 10vw;
+    }
+
+    .heroSection p {
+        font-size: 4vw;
+    }
+
+
+    .navigation {
+        display: flex;
+        justify-content: end;
+        gap: 4vw;
+    }
+
+    /* Om os section */
+
+    .omOsSect section {
+        display: flex;
+    }
+
+    #heroVid {
+        height: auto;
+        width: 100%;
+    }
+
+    /* Location section */
+
+    .card {
+        display: flex;
+    }
+
+    .card section img {
+        width: 45vw;
+        height: auto;
+        margin: 0 2vw 0 0;
+    }
+
+    /* img Switcher */
+
+    .gridImg {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        height: 40vh;
+    }
+
+    .bigImg {
+        height: 40.7vh;
+    }
+
+    .imgGalleri {
+        margin: 0;
+        padding: 0;
+    }
+
+    .gridSect {
+        grid-template-columns: 44vw 44vw;
+        grid-template-rows: 45vh;
+    }
+
+
+    /* Footer */
+
+    #map {
+        height: 40vh;
+    }
+
+    .footerInfo h3 {
+        font-size: 3vw;
+        margin: 1vh 0 2vh 0;
+    }
+
+    .footerInfo p {
+        font-size: 2.5vw;
+    }
+
+    #footerH3 {
+        font-size: 3vw;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+
+}
+
+
+
+/* Desktop */
+@media (min-width: 1500px) {
+
+    body {
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    /* hero section */
+
+    .heroSection h1 {
+        font-size: 6vw;
+    }
+
+    .heroSection p {
+        font-size: 3.5vw;
+    }
+
+
+    /* navigation */
+    .navigation {
+        justify-content: start;
+    }
+
+    .navigation li a {
+        font-size: 1.5vw;
+    }
+
+    /* Om os section */
+
+    .omOsInfo h3 {
+        margin-top: 2vh;
+        font-size: 1.5vw;
+    }
+
+    .omOsInfo p {
+        font-size: 1vw;
+        margin-right: 3vw;
+    }
+
+    #link {
+        margin: 0 4vw 0 0;
+        text-align: end;
+        
+    }
+
+    /* Locations */
+
+    .card {
+        display: unset;
+    }
+
+    .card2x3 {
+        display: flex;
+    }
+
+    .locationImg {
+        max-height: 60vh;
+        max-width: 42vw;
+
+    }
+
+    /* image galleri / img switcher */
+
+    .gridSect {
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 75vh;
+    }
+
+    .gridImg {
+        /* gap: 2vw; */
+        width: 40vw;
+        height: 50vh;
+    }
+
+    .bigImg {
+        height: 70vh;
+    }
+
+    /* Footer */
+
+    #footerH3 {
+        font-size: 2.5vw;
+    }
+
+    .footerInfo h3 {
+        font-size: 2.5vw;
+    }
+
+    .footerInfo p {
+        font-size: 2vw;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
